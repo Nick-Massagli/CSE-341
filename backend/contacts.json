@@ -1,0 +1,23 @@
+{
+    "contact": {
+        "firstName": "Peter",
+        "lastName": "Parker",
+        "email": "pparker@dailybugle.com",
+        "favoriteColor": "Red",
+        "birthday": "10/14/1994"
+    },
+    "contact2": {
+        "firstName": "Clark",
+        "lastName": "Kent",
+        "email": "Kent.Clark@dailyplanet.org",
+        "favoriteColor": "Blue",
+        "birthday": "02/29/1938"
+    },
+    "contact3": {
+        "firstName": "Steve",
+        "lastName": "Rogers",
+        "email": "CaptRogers@sheild.gov",
+        "favoriteColor": "Red",
+        "birthday": "07/04/1918"
+    }
+}
