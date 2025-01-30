@@ -25,10 +25,10 @@ content-type: application/json
     "firstName":"Peter", 
     "lastName":"Parker", 
     "email":"pparker@dailybugle.com", 
-    "favoriteColor":"Red", 
+    "favoriteColor":"Blue", 
     "birthday":"10/14/1994"
 }
 
 ### DELETE contact 
-DELETE http://localhost:8080/contacts/6793fbcb9cdf86041adf9214 HTTP/1.1
+DELETE http://localhost:8080/contacts/6794011c7b186f8c279e0c82 HTTP/1.1
 
