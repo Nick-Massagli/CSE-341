@@ -1,0 +1,12 @@
+{
+    "character": {
+        "firstName": "Barry",
+        "lastName": "Ka'uhane",
+        "strength": "20",
+        "dexterity": "7",
+        "constitution": "16",
+        "intellegence": "7",
+        "wisdom": "20",
+        "charisma": "14"
+    }
+}
