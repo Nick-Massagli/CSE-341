@@ -15,10 +15,6 @@
     {
       "name": "Class",
       "description": "functions regarding class"
-    },
-    {
-      "name": "Not Yet Implemented",
-      "description": "These API endpoints are designed and will be created in the near future"
     }
   ],
   "schemes": [
@@ -108,7 +104,7 @@
         }
       },
       "put": {
-        "tags": ["Not Yet Implemented"],
+        "tags": ["Character"],
         "description": "",
         "parameters": [
           {
@@ -161,7 +157,7 @@
         }
       },
       "delete": {
-        "tags": ["Not Yet Implemented"],
+        "tags": ["Character"],
         "description": "",
         "parameters": [
           {
@@ -246,7 +242,7 @@
         }
       },
       "put": {
-        "tags": ["Not Yet Implemented"],
+        "tags": ["Class"],
         "description": "",
         "parameters": [
           {
@@ -281,7 +277,7 @@
         }
       },
       "delete": {
-        "tags": ["Not Yet Implemented"],
+        "tags": ["Class"],
         "description": "",
         "parameters": [
           {

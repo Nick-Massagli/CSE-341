@@ -31,8 +31,44 @@ const createClass = async (req, res) => {
   }
 };
 
+const updateClass = async (req, res) => {
+  const userId = new ObjectId(req.params.id);
+  const type = {
+    name: req.body.name,
+    mainStat: req.body.mainStat
+  };
+  const response = await mongodb
+    .getDb()
+    .db()
+    .collection('class')
+    .replaceOne({ _id: userId }, type);
+  console.log(response);
+  if (response.modifiedCount > 0) {
+    res.status(204).send();
+  } else {
+    res.status(500).json(response.error || 'Some error occurred while updating the class.');
+  }
+};
+
+const deleteClass = async (req, res) => {
+  const userId = new ObjectId(req.params.id);
+  const response = await mongodb
+  .getDb()
+  .db()
+  .collection('class')
+  .deleteOne({ _id: userId }, true);
+  console.log(response);
+  if (response.deletedCount > 0) {
+    res.status(204).send();
+  } else {
+    res.status(500).json(response.error || 'Some error occurred while deleting the class.');
+  }
+};
+
 module.exports = {
   getAll,
   getSingle,
-  createClass
+  createClass,
+  updateClass,
+  deleteClass 
 };

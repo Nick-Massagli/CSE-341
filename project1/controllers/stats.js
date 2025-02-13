@@ -37,8 +37,50 @@ const createCharacter = async (req, res) => {
   }
 };
 
+const updateCharacter = async (req, res) => {
+  const userId = new ObjectId(req.params.id);
+  const stat = {
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    strength: req.body.strength,
+    dexterity: req.body.dexterity,
+    constitution: req.body.constitution,
+    intellegence: req.body.intellegence,
+    wisdom: req.body.wisdom,
+    charisma: req.body.charisma
+  };
+  const response = await mongodb
+    .getDb()
+    .db()
+    .collection('stats')
+    .replaceOne({ _id: userId }, stat);
+  console.log(response);
+  if (response.modifiedCount > 0) {
+    res.status(204).send();
+  } else {
+    res.status(500).json(response.error || 'Some error occurred while updating the character.');
+  }
+};
+
+const deleteCharacter = async (req, res) => {
+  const userId = new ObjectId(req.params.id);
+  const response = await mongodb
+  .getDb()
+  .db()
+  .collection('stats')
+  .deleteOne({ _id: userId }, true);
+  console.log(response);
+  if (response.deletedCount > 0) {
+    res.status(204).send();
+  } else {
+    res.status(500).json(response.error || 'Some error occurred while deleting the contact.');
+  }
+};
+
 module.exports = {
   getAll,
   getSingle,
-  createCharacter
+  createCharacter,
+  updateCharacter,
+  deleteCharacter
 };
